@@ -1,3 +1,4 @@
+#!/bin/bash
 if command -v sbt > /dev/null;
 then
     echo sbt is available
@@ -5,7 +6,7 @@ then
 fi
 
 SBTURL="https://sbt-downloads.cdnedge.bluemix.net/releases/v1.2.8/sbt-1.2.8.tgz"
-TARGZ=${SBTUR##*/}
+TARGZ=${SBTURL##*/}
 OLDPWD=$PWD
 
 echo "Installing $TARGZ locally in home directory"
@@ -17,13 +18,13 @@ then
     echo 'PATH=$PATH:~/bin' > $HOME/.bashrc
 fi
 
-if ![  -f $TARGZ ]
+if ! [  -f $TARGZ ]
 then
-    curl $SBTURL
+    curl --output $TARGZ $SBTURL
 fi
 
 tar xvzf $TARGZ
-ls -s $HOME/sbt/bin/sbt $HOME/bin/sbt
+ln -s $HOME/sbt/bin/sbt $HOME/bin/sbt
 
 cd $OLDPWD
 echo "Restart your terminal!"
