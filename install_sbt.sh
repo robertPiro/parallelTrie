@@ -26,5 +26,6 @@ fi
 tar xvzf $TARGZ
 ln -s $HOME/sbt/bin/sbt $HOME/bin/sbt
 
+source ~/.bashrc
 cd $OLDPWD
-echo "Restart your terminal!"
+sbt
