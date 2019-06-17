@@ -15,7 +15,7 @@ cd $HOME
 if ! [ -d $HOME/bin ];
 then
     mkdir -p $HOME/bin
-    echo 'PATH=$PATH:~/bin' > $HOME/.bashrc
+    echo 'PATH=$PATH:~/bin' >> $HOME/.bashrc
 fi
 
 if ! [  -f $TARGZ ]
