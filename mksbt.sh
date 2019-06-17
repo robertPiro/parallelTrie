@@ -34,8 +34,18 @@ then
     fi
 fi
 
-mkdir -p src/{main,test}/{java,resources,scala}
-mkdir lib project target
+for i in main test;
+do
+    for j in java resources scala;
+    do
+        if ! [ -d src/$i/$j ]; then mkdir -p src/$i/$j; fi
+    done
+done
+
+for i in lib project target;
+do
+    if ! [ -d $i ]; then mkdir $i; fi
+done
 
 # create an initial build.sbt file
 if [ -f build.sbt ];
