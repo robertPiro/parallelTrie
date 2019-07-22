@@ -1,4 +1,17 @@
 #!/bin/bash
+if [ -z "$SCALA_VERSION"];
+then
+    SCALA_VERSION=2.13.0
+    echo "Env var SCALA_VERSION not set. Using default $SCALA_VERSION"
+fi
+
+if [ -z "$SBT_VERSION"];
+then
+    SBT_VERSION=1.2.8
+    echo "Env var SBT_VERSION not set. Using default $SBT_VERSION"
+
+fi
+
 function yesno() {
     MSG=$1
     echo $MSG
@@ -52,22 +65,22 @@ if [ -f build.sbt ];
 then
     if yesno "A build.sbt file was found. Overwrite (Y/n)?";
     then
-        build_sbt 2.12.7
+        build_sbt $SCALA_VERSION
     else
         exit 1
     fi
 else
-    build_sbt 2.12.7
+    build_sbt $SCALA_VERSION
 fi
 
 if [ -f ./project/build.properties ];
 then
     if yesno "A ./project/build.properties file was found. Overwrite (Y/n)?";
     then
-        echo "sbt.version=1.2.8" > ./project/build.properties
+        echo "sbt.version=$SBT_VERSION" > ./project/build.properties
     else
         exit 1
     fi
 else
-    echo "sbt.version=1.2.8" > ./project/build.properties
+    echo "sbt.version=$SBT_VERSION" > ./project/build.properties
 fi
