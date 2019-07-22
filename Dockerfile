@@ -16,6 +16,7 @@ RUN \
 
 USER gitpod
 ADD ./mksbt.sh ~/bin/mksbt.sh
+ADD ./install_sbt.sh ~/bin/install_sbt.sh
 ENV PATH ~/bin:$PATH
 
 # Give back control
