@@ -1,4 +1,5 @@
-image: node:alpine
+image: 
+   file: .gitpod.dockerfile
 #  file: Dockerfile
 #tasks:
 #  - command: >
