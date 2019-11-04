@@ -1,5 +1,5 @@
 image: 
-   file: .gitpod.dockerfile
+   file: Dockerfile
 #  file: Dockerfile
 #tasks:
 #  - command: >
