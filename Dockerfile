@@ -14,8 +14,8 @@ RUN curl -L -o sbt-$SBT_VERSION.deb https://dl.bintray.com/sbt/debian/sbt-$SBT_V
   apt-get install sbt
 
 USER gitpod
- ADD ./mksbt.sh ~/bin/mksbt.sh
- ADD ./install_sbt.sh ~/bin/install_sbt.sh
+ ADD ./mksbt.sh       /home/gitpod/bin/mksbt.sh
+ ADD ./install_sbt.sh /home/gitpod/bin/install_sbt.sh
 ENV PATH ~/bin:$PATH
 
 # Give back control
