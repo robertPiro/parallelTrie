@@ -43,7 +43,6 @@ then
         exit 1
     else
         echo yes
-        exit 1
     fi
 fi
 
