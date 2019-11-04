@@ -1,5 +1,5 @@
-image:
-  file: Dockerfile
+image: node:alpine
+#  file: Dockerfile
 #tasks:
 #  - command: >
 #       sbt
