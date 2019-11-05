@@ -1,11 +1,11 @@
 #!/bin/bash
-if [ -z "$SCALA_VERSION"];
+if [ -z "$SCALA_VERSION" ];
 then
     SCALA_VERSION=2.13.0
     echo "Env var SCALA_VERSION not set. Using default $SCALA_VERSION"
 fi
 
-if [ -z "$SBT_VERSION"];
+if [ -z "$SBT_VERSION" ];
 then
     SBT_VERSION=1.2.8
     echo "Env var SBT_VERSION not set. Using default $SBT_VERSION"
