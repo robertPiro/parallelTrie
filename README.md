@@ -13,17 +13,19 @@ or else the program is terminated.
 
 
 ## VS Code extension for Scala
-Download `Scala (Metals)` extension from
- * [Microsoft Marketplace](https://marketplace.visualstudio.com/items?itemName=scalameta.metals)
-   which can be found on the right under heading resources after Categories and Tags) or
- * [VisxHub](https://www.vsixhub.com)
+From the Microsoft Marketplace, download the following extensions
+ * [Scala Syntax (official)](https://marketplace.visualstudio.com/items?itemName=scala-lang.scala)
+ * [Scala (Metals)](https://marketplace.visualstudio.com/items?itemName=scalameta.metals)
+The download button can be found on the right under heading resources after Categories and Tags. Alternatively
+the Extensions can also be found at [VisxHub](https://www.vsixhub.com).
 
 Open in GitPod Menu -> View -> Extensions and drag and drop file into left-hand "context" window
-titled EXTENSIONS (BETA). For `Scala (Metals) 1.6.2` the following lines to `gitpod.yml`:
+titled EXTENSIONS (BETA). For `Scala Syntax (official) 0.3.8` and `Scala (Metals) 1.6.2` the following 
+lines will be added to `gitpod.yml`:
 ```
 vscode:
   extensions:
-    - scalameta.metals@1.6.2:njgbLSjeMDyY9TZFwn0Bdw==
+    - scala-lang.scala@0.3.8:wQBBM+lKILHBqOqlqW60xA==
+    - scalameta.metals@1.6.2:njgbLSjeMDyY9TZFwn0Bdw== 
 ```
-Currently it cmplains about that it cannot be activated as another extension
-for `scala.lang - scala` is not installed.
+This concludes the installation.

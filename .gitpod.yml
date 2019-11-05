@@ -1,9 +1,8 @@
-image: 
+image:
    file: Dockerfile
-#  file: Dockerfile
-#tasks:
-#  - command: >
-#       sbt
+tasks:
+  - command: >
+       sbt
 #      echo ROCKET_ADDRESS=$ROCKET_ADDRESS >> .env &&
 #      echo ROCKET_PORT=$ROCKET_PORT >> .env &&
 #      pg_start.sh &&
@@ -12,3 +11,7 @@ image:
 #      cargo run
 #ports:
 # - port: 8000
+vscode:
+  extensions:
+    - scalameta.metals@1.6.2:njgbLSjeMDyY9TZFwn0Bdw==
+    - scala-lang.scala@0.3.8:wQBBM+lKILHBqOqlqW60xA==
